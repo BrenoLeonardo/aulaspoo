@@ -11,7 +11,7 @@ public class Teste3EntradaDados {
 		Double nota1 = Double.parseDouble(numero1);
 		Double nota2 = Double.parseDouble(numero2);
 		
-		JOptionPane.showMessageDialog(null, "Média"+(nota1+nota2)/2);
+		JOptionPane.showMessageDialog(null, "Média: "+(nota1+nota2)/2);
 	}
 
 }
