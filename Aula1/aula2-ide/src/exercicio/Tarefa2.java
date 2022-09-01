@@ -51,7 +51,7 @@ public class Tarefa2 {
 		System.out.println("O nome da pessoa com maior altura é: "+maiAlt);
 		System.out.println("O nome da pessoa com maior peso é: "+maiPeso);
 		System.out.printf("A média de peso é %.3f ", medPeso);
-		System.out.printf("A média de altura é %.2f ", medAlt);
+		System.out.printf("\nA média de altura é %.2f ", medAlt);
 	}
 
 }
