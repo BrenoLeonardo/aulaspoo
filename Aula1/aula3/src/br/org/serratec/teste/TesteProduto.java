@@ -11,8 +11,6 @@ public class TesteProduto {
 		sc.close();
 		for(int i = 0; i < 3; i++) {
 			
-		
-			
 			System.out.println("Digite o código");
 			Integer codigo = sc.nextInt();
 			

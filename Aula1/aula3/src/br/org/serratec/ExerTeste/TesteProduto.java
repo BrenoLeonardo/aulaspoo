@@ -10,10 +10,11 @@ public class TesteProduto {
 		Produto produto1 = new Produto("batata", 10., 4);	
 		
 		Scanner sc = new Scanner(System.in);
-		Character opt = 'N';
+		char opt = 'N';
 		
-		while(opt == 'N') {
-			
+		while(opt != 'S') {
+			System.out.println("Deseja encerrar o programa? (S/N)");
+			opt = sc.next().charAt(0);
 			switch(opt) {
 				case 'S':
 					break;
@@ -23,14 +24,12 @@ public class TesteProduto {
 					System.out.println("Quantidade: "+ produto1.getQuantidade());
 					System.out.println("Total: "+ (produto1.Total()));
 					System.out.println("ICMS: "+ produto1.calcularIcms());
-					
-					System.out.println("Deseja encerrar o programa? (S/N)");
-					opt = sc.next();
 				default:
 					System.out.println("Digito errado!");
 					break;
 				}
-			}		
+		}
+					
 			
 		
 	}
