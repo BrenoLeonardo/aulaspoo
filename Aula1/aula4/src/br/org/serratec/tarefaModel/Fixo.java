@@ -5,16 +5,15 @@ public class Fixo extends Vendedor {
 	private Double comissao;
 	private Double salarioBruto;
 	
-	public Fixo(String nome, String cpf, Double salarioBase, Double comissao, Double salarioBruto) {
+	public Fixo(String nome, String cpf, Double salarioBase, Double comissao) {
 		super(nome, cpf);
 		this.salarioBase = salarioBase;
 		this.comissao = comissao;
-		this.salarioBruto = salarioBase;
+		
 	}
 
-	@Override
 	public String toString() {
-		return "Fixo [salarioBase=" + salarioBase + ", comissao=" + comissao + ", salarioBruto=" + salarioBruto + "]";
+		return "Nome: "+ nome+"\nsalário Bruto: " + salarioBruto+"\n";
 	}
 
 	public Double getSalarioBase() {
@@ -42,7 +41,9 @@ public class Fixo extends Vendedor {
 	}
 	
 	public void calcularSalario(Double valorVenda) {
-		salarioBruto += valorVenda * comissao;
+		Double calculoComissao = valorVenda * comissao/100;
+		salarioBruto += calculoComissao;
+		
 	}
 	
 }

@@ -1,15 +1,17 @@
 package br.edu.senai.tarefa;
 
+import java.util.ArrayList;
+
 public class Contato {
 	private String nome;
-	Telefone[] telefones;
-	Endereco endereco;
+	//private Telefone[] telefones;
+	//private Telefone[] - {new Telefone("1234567"), new Telefone("98765432");
+	private ArrayList<Telefone> telefones = new ArrayList<>();
+	private Endereco endereco;
 	
 	
-	public Contato(String nome, Telefone[] telefones, Endereco endereco) {
-		super();
+	public Contato(String nome, Endereco endereco) {
 		this.nome = nome;
-		this.telefones = telefones;
 		this.endereco = endereco;
 	}
 
@@ -17,12 +19,8 @@ public class Contato {
 		return nome;
 	}
 
-	public Telefone[] getTelefones() {
+	public ArrayList<Telefone> getTelefones() {
 		return telefones;
-	}
-
-	public void setTelefones(Telefone[] telefones) {
-		this.telefones = telefones;
 	}
 
 	public Endereco getEndereco() {
@@ -30,12 +28,16 @@ public class Contato {
 	}
 	
 	public void contaTelefones(Telefone telefone) {
-		for (int i = 0; i < telefones.length; i++) {
+			for	(Telefone telefones : telefones) {
+				System.out.println();
+		}
+		/*
+		 for (int i = 0; i < telefones.length; i++) {
 			if(telefones[i] == null) {
 				telefones[i] = telefone;
 				break;
-			}
-		}
+			} 
+		 */
 		
 	}
 }

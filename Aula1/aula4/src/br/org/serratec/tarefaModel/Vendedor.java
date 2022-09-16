@@ -25,7 +25,4 @@ public class Vendedor {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	
-	
-
 }

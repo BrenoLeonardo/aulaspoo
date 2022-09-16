@@ -1,19 +1,19 @@
 package br.org.serratec.modelTarefa;
 
-public class Livro extends Operacao {
+public class Livro {
 	private String autor;
 	private String titulo;
 	private Double valor;
 	
-	public Livro(String tipo, Double valorOperacao, Livro livro, String autor, String titulo, Double valor) {
-		super(tipo, valorOperacao, livro);
+	public Livro(String autor, String titulo, Double valor) {
+		super();
 		this.autor = autor;
 		this.titulo = titulo;
 		this.valor = valor;
 	}
-	
+
 	public String toString() {
-		return "Livro [autor=" + autor + ", titulo=" + titulo + ", valor=" + valor + "]";
+		return "\nAutor: " + autor + ", título: " + titulo;
 	}
 
 	public String getAutor() {
@@ -28,7 +28,7 @@ public class Livro extends Operacao {
 		return valor;
 	}
 	
-	public void reajusste() {
-		
+	public void reajusste(Double valor) {
+		this.valor = this.valor + this.valor * valor/100;
 	}
 }

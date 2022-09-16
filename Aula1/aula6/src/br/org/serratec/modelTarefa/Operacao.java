@@ -5,17 +5,16 @@ public class Operacao implements Livraria{
 	protected Double ValorOperacao;
 	protected Livro livro;
 	
-	public Operacao(String tipo, Double valorOperacao, Livro livro) {
+	public Operacao(String tipo, Livro livro) {
 		super();
 		this.tipo = tipo;
-		ValorOperacao = valorOperacao;
 		this.livro = livro;
 	}
 	
 	public String toString() {
-		return "Operacao [tipo=" + tipo + ", ValorOperacao=" + ValorOperacao + ", livro=" + livro + "]";
-	}
-
+		return "Tipo: " + tipo + ", Valor: "+ String.format("%.2f", ValorOperacao);
+		}
+		
 	public Livro getLivro() {
 		return livro;
 	}
@@ -32,12 +31,11 @@ public class Operacao implements Livraria{
 		return ValorOperacao;
 	}
 	
-	public void venderLivro() {
-		valorOperacao = valor * 1.09;
-	}
-	
 	public void emprestarLivro() {
-		valorOperacao = valor * 1.02 + taxaEmprestimo;
+		ValorOperacao = livro.getValor() * 2/100 + taxaEmprestimo;
 	}
 	
+	public void venderLivro() {
+		ValorOperacao = livro.getValor() * 1.09;
+	}
 }

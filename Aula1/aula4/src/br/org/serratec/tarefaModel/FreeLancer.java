@@ -25,7 +25,4 @@ public class FreeLancer extends Vendedor {
 	public void setValorDia(Double valorDia) {
 		this.valorDia = valorDia;
 	}
-	
-	
-	
 }

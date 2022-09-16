@@ -1,9 +1,9 @@
 package br.org.serratec.modelTarefa;
 
 public interface Livraria {
-	Double taxaEmprestimo = 2.0;
+	Double taxaEmprestimo = 2.8;
 	
-	void emprestarLivro(Double valor);
+	void emprestarLivro();
 	
-	void venderLivro(Double valor);
+	void venderLivro();
 }
